@@ -449,7 +449,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> with TickerProviderStateM
       children: <Widget>[
         Positioned(
           left: _getSpace(),
-          top: contentY + widget.offsetY,
+          top: contentY + offset,
           child: FractionalTranslation(
             translation: Offset(0.0, contentFractionalOffset as double),
             child: SlideTransition(

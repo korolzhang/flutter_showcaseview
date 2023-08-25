@@ -348,6 +348,7 @@ class Showcase extends StatefulWidget {
         descriptionPadding = null,
         titleTextDirection = null,
         descriptionTextDirection = null,
+        offsetY = -10
         assert(overlayOpacity >= 0.0 && overlayOpacity <= 1.0,
             "overlay opacity must be between 0 and 1.");
 

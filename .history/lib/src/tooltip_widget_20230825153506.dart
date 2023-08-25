@@ -95,7 +95,6 @@ class ToolTipWidget extends StatefulWidget {
     this.descriptionPadding,
     this.titleTextDirection,
     this.descriptionTextDirection,
-    this.offsetY = -10,
   }) : super(key: key);
 
   @override
@@ -449,7 +448,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> with TickerProviderStateM
       children: <Widget>[
         Positioned(
           left: _getSpace(),
-          top: contentY + widget.offsetY,
+          top: contentY - 10,
           child: FractionalTranslation(
             translation: Offset(0.0, contentFractionalOffset as double),
             child: SlideTransition(

@@ -244,7 +244,8 @@ class Showcase extends StatefulWidget {
   /// will still provide a callback.
   final VoidCallback? onBarrierClick;
 
-  final double offsetY;
+
+  final double 
 
   const Showcase({
     required this.key,
@@ -271,7 +272,8 @@ class Showcase extends StatefulWidget {
     this.movingAnimationDuration = const Duration(milliseconds: 2000),
     this.disableMovingAnimation,
     this.disableScaleAnimation,
-    this.tooltipPadding = const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+    this.tooltipPadding =
+        const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
     this.onToolTipClick,
     this.targetPadding = EdgeInsets.zero,
     this.blurValue,
@@ -289,7 +291,6 @@ class Showcase extends StatefulWidget {
     this.titleTextDirection,
     this.descriptionTextDirection,
     this.onBarrierClick,
-    this.offsetY = -10,
   })  : height = null,
         width = null,
         container = null,
@@ -314,8 +315,8 @@ class Showcase extends StatefulWidget {
     this.overlayColor = Colors.black45,
     this.targetBorderRadius,
     this.overlayOpacity = 0.75,
-    this.scrollLoadingWidget =
-        const CircularProgressIndicator(valueColor: AlwaysStoppedAnimation(Colors.white)),
+    this.scrollLoadingWidget = const CircularProgressIndicator(
+        valueColor: AlwaysStoppedAnimation(Colors.white)),
     this.onTargetClick,
     this.disposeOnTap,
     this.movingAnimationDuration = const Duration(milliseconds: 2000),
@@ -327,7 +328,6 @@ class Showcase extends StatefulWidget {
     this.disableDefaultTargetGestures = false,
     this.tooltipPosition,
     this.onBarrierClick,
-    this.offsetY = -10,
   })  : showArrow = false,
         onToolTipClick = null,
         scaleAnimationDuration = const Duration(milliseconds: 300),
@@ -394,7 +394,9 @@ class _ShowcaseState extends State<Showcase> {
       }
 
       if (showCaseWidgetState.autoPlay) {
-        timer = Timer(Duration(seconds: showCaseWidgetState.autoPlayDelay.inSeconds), _nextIfAny);
+        timer = Timer(
+            Duration(seconds: showCaseWidgetState.autoPlayDelay.inSeconds),
+            _nextIfAny);
       }
     }
   }
@@ -501,8 +503,11 @@ class _ShowcaseState extends State<Showcase> {
             clipper: RRectClipper(
               area: _isScrollRunning ? Rect.zero : rectBound,
               isCircle: widget.targetShapeBorder is CircleBorder,
-              radius: _isScrollRunning ? BorderRadius.zero : widget.targetBorderRadius,
-              overlayPadding: _isScrollRunning ? EdgeInsets.zero : widget.targetPadding,
+              radius: _isScrollRunning
+                  ? BorderRadius.zero
+                  : widget.targetBorderRadius,
+              overlayPadding:
+                  _isScrollRunning ? EdgeInsets.zero : widget.targetPadding,
             ),
             child: blur != 0
                 ? BackdropFilter(
@@ -511,7 +516,8 @@ class _ShowcaseState extends State<Showcase> {
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height,
                       decoration: BoxDecoration(
-                        color: widget.overlayColor.withOpacity(widget.overlayOpacity),
+                        color: widget.overlayColor
+                            .withOpacity(widget.overlayOpacity),
                       ),
                     ),
                   )
@@ -519,7 +525,8 @@ class _ShowcaseState extends State<Showcase> {
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height,
                     decoration: BoxDecoration(
-                      color: widget.overlayColor.withOpacity(widget.overlayOpacity),
+                      color: widget.overlayColor
+                          .withOpacity(widget.overlayOpacity),
                     ),
                   ),
           ),
@@ -554,10 +561,10 @@ class _ShowcaseState extends State<Showcase> {
             contentWidth: widget.width,
             onTooltipTap: _getOnTooltipTap,
             tooltipPadding: widget.tooltipPadding,
-            disableMovingAnimation:
-                widget.disableMovingAnimation ?? showCaseWidgetState.disableMovingAnimation,
-            disableScaleAnimation:
-                widget.disableScaleAnimation ?? showCaseWidgetState.disableScaleAnimation,
+            disableMovingAnimation: widget.disableMovingAnimation ??
+                showCaseWidgetState.disableMovingAnimation,
+            disableScaleAnimation: widget.disableScaleAnimation ??
+                showCaseWidgetState.disableScaleAnimation,
             movingAnimationDuration: widget.movingAnimationDuration,
             tooltipBorderRadius: widget.tooltipBorderRadius,
             scaleAnimationDuration: widget.scaleAnimationDuration,
