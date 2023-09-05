@@ -574,6 +574,7 @@ class _ShowcaseState extends State<Showcase> {
             titleTextDirection: widget.titleTextDirection,
             descriptionTextDirection: widget.descriptionTextDirection,
             offsetY: widget.offsetY,
+            noAnimateWidget: widget.noAnimateWidget,
           ),
         ],
       ],
