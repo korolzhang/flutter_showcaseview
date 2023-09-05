@@ -62,7 +62,6 @@ class ToolTipWidget extends StatefulWidget {
   final TextDirection? titleTextDirection;
   final TextDirection? descriptionTextDirection;
   final double offsetY;
-  final Widget? noAnimateWidget;
 
   const ToolTipWidget({
     Key? key,
@@ -97,7 +96,6 @@ class ToolTipWidget extends StatefulWidget {
     this.titleTextDirection,
     this.descriptionTextDirection,
     this.offsetY = -10,
-    this.noAnimateWidget,
   }) : super(key: key);
 
   @override
@@ -483,7 +481,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> with TickerProviderStateM
                   ),
                 ),
               ),
-              widget.noAnimateWidget ?? Container(),
+              widget.
             ],
           ),
         ),

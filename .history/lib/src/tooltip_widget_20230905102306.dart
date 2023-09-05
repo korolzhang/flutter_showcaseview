@@ -483,7 +483,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> with TickerProviderStateM
                   ),
                 ),
               ),
-              widget.noAnimateWidget ?? Container(),
+              widget.noAnimateWidget,
             ],
           ),
         ),

@@ -292,7 +292,7 @@ class Showcase extends StatefulWidget {
     this.descriptionTextDirection,
     this.onBarrierClick,
     this.offsetY = -10,
-    this.noAnimateWidget,
+    this.w
   })  : height = null,
         width = null,
         container = null,
@@ -331,7 +331,6 @@ class Showcase extends StatefulWidget {
     this.tooltipPosition,
     this.onBarrierClick,
     this.offsetY = -10,
-    this.noAnimateWidget,
   })  : showArrow = false,
         onToolTipClick = null,
         scaleAnimationDuration = const Duration(milliseconds: 300),

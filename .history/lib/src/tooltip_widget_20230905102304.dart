@@ -62,7 +62,7 @@ class ToolTipWidget extends StatefulWidget {
   final TextDirection? titleTextDirection;
   final TextDirection? descriptionTextDirection;
   final double offsetY;
-  final Widget? noAnimateWidget;
+  final Widget? 
 
   const ToolTipWidget({
     Key? key,
@@ -483,7 +483,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> with TickerProviderStateM
                   ),
                 ),
               ),
-              widget.noAnimateWidget ?? Container(),
+              widget.noAnimateWidget,
             ],
           ),
         ),
